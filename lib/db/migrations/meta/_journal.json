@@ -1,0 +1,20 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "5",
+      "when": 1705981274255,
+      "tag": "0000_deep_earthquake",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "5",
+      "when": 1705981353665,
+      "tag": "0001_strong_medusa",
+      "breakpoints": true
+    }
+  ]
+}
