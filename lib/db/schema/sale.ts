@@ -2,9 +2,9 @@ import { integer, varchar, pgTable } from "drizzle-orm/pg-core";
 import { createInsertSchema, createSelectSchema } from "drizzle-zod";
 import { z } from "zod";
 
-import { type getSale } from "@/lib/api/sale/queries";
 
 import { randomUUID } from "crypto";
+import { getSales } from "@/lib/api/sale/queries";
 
 
 export const sale = pgTable('sale', {
@@ -42,5 +42,5 @@ export type UpdateSaleParams = z.infer<typeof updateSaleParams>;
 export type SaleId = z.infer<typeof saleIdSchema>["id"];
     
 // this type infers the return from getSale() - meaning it will include any joins
-export type CompleteSale = Awaited<ReturnType<typeof getSale>>["sale"][number];
+export type CompleteSale = Awaited<ReturnType<typeof getSales>>["sale"][number];
 
